@@ -1,0 +1,29 @@
+.history {
+  .header {
+    font-weight: 600;
+  }
+
+  .item {
+    padding: 10px 0 10px 0;
+    overflow: auto;
+
+    .image {
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin: 0 15px 0 0;
+
+      img {
+        border-radius: 40px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .content {
+      .text {
+
+      }
+    }
+  }
+}
