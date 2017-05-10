@@ -21,7 +21,7 @@ class Ticket extends Component {
         <div className='content'>
           <div className='author'>{ticket.author.name}</div>
           <div className='title'>
-            <div className={`severity ${ticket.severity}`} />
+            <div className={`severity${ticket.isOpen ? ` ${ticket.severity}`: '' }`} />
             <div className='text'>{ticket.title}</div>
           </div>
           <div className='description'>{ticket.description}</div>

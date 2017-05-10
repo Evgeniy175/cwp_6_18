@@ -14,16 +14,37 @@ class AppState {
   @observable selectedTicket = TICKETS[0];
   @observable currentUser = USERS[0];
 
-  @action setSelectedTicket(value) {
+  @action
+  setSelectedTicket(value) {
     this.selectedTicket = value;
   }
 
-  @action addMessage(value) {
+  @action
+  addMessage(value) {
     this.messages.push(value);
   }
 
-  @action addToHistory(value) {
+  @action
+  addToHistory(value) {
     this.history.push(value);
+  }
+
+  @action
+  setSeverity(id, newSeverity) {
+    const idx = this.tickets.findIndex(t => t.id === id);
+
+    if (idx === -1) return;
+
+    this.tickets[idx].severity = newSeverity;
+  }
+
+  @action
+  closeTicket(id) {
+    const idx = this.tickets.findIndex(t => t.id === id);
+
+    if (idx === -1) return;
+
+    this.tickets[idx].isOpen = false;
   }
 }
 

@@ -35,7 +35,7 @@ class AddMessage extends Component {
             <Col xs={8} className='column-container'>
               <textarea onChange={this.onChange} />
             </Col>
-            <Col xs={4} className='column-container'>
+            <Col xs={4} className='column-container text-right'>
               <Button bsStyle='primary' bsSize='large' onClick={this.onSubmit}>Submit</Button>
             </Col>
           </Row>

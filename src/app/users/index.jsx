@@ -18,36 +18,41 @@ class Users extends Component {
 
 export default Users;
 
+export const ROLES = {
+  ADMIN: 'admin',
+  USER: 'user'
+};
+
 export const USERS = [
   {
     id: 1,
     name: 'E. Ryabchenko',
     email: 'evgeniy.ryabchenko.175@gmail.com',
-    role: 'admin',
+    role: ROLES.ADMIN,
     avatar: ResAvatar
   }, {
     id: 2,
     name: 'F. Plehanov',
     email: 'f.p@gmail.com',
-    role: 'user',
+    role: ROLES.USER,
     avatar: PfaAvatar
   }, {
     id: 3,
     name: 'A. Shakinko',
     email: 'saa@gmail.com',
-    role: 'user',
+    role: ROLES.USER,
     avatar: SaaAvatar
   }, {
     id: 4,
     name: 'A. Korovkin',
     email: 'kaa@gmail.com',
-    role: 'user',
+    role: ROLES.USER,
     avatar: KaaAvatar
   }, {
     id: 5,
     name: 'I. Zelenko',
     email: 'zii@gmail.com',
-    role: 'user',
+    role: ROLES.USER,
     avatar: ZiiAvatar
   }
 ];
