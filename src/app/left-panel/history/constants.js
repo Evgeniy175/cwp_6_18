@@ -1,7 +1,8 @@
 export const ACTIONS = {
   COMMENTED: 'commented',
   SET_SEVERITY: 'set severity',
-  TICKET_ADDED: 'ticket added'
+  TICKET_ADDED: 'ticket added',
+  TICKET_CLOSED: 'ticket closed'
 };
 
 export const HISTORY = [

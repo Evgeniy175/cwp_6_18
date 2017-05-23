@@ -27,6 +27,7 @@ class App extends Component {
   }
 
   onMessageAddingHandler(message) {
+    this.state
     this.state.addMessage(message);
   }
 

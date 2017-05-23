@@ -6,27 +6,26 @@ import { ACTIONS } from '../constants';
 
 const CONTENT_RENDERS = {};
 
-CONTENT_RENDERS[ACTIONS.COMMENTED] = (user, ticket) => {
-  return (
-    <div className='content'>
-      {user.name} commented on ticket #{ticket.id}
-    </div>
+CONTENT_RENDERS[ACTIONS.COMMENTED] = (user, ticket) => (
+  <div className='content'>
+    {user.name} commented on ticket #{ticket.id}
+  </div>
+);
+CONTENT_RENDERS[ACTIONS.SET_SEVERITY] = (user, ticket) => (
+  <div className='content'>
+    {user.name} changed severity of ticket #{ticket.id}
+  </div>
   );
-};
-CONTENT_RENDERS[ACTIONS.SET_SEVERITY] = (user, ticket) => {
-  return (
-    <div className='content'>
-      {user.name} set severity to {ticket.severity}
-    </div>
-  );
-};
-CONTENT_RENDERS[ACTIONS.TICKET_ADDED] = (user, ticket) => {
-  return (
-    <div className='content'>
-      {user.name} added ticket #{ticket.id}
-    </div>
-  );
-};
+CONTENT_RENDERS[ACTIONS.TICKET_ADDED] = (user, ticket) => (
+  <div className='content'>
+    {user.name} added ticket #{ticket.id}
+  </div>
+);
+CONTENT_RENDERS[ACTIONS.TICKET_CLOSED] = (user, ticket) => (
+  <div className='content'>
+    {user.name} closed ticket #{ticket.id}
+  </div>
+);
 
 @observer
 class HistoryItem extends Component {
